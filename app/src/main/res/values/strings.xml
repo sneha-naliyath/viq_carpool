@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Carpooling</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="button">Button</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="title_activity_signup1">Signup1</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="continue1">CONTINUE</string>
+    <string name="sign_up1">Sign up</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="capacity">Capacity:</string>
+    <string name="car_model">Car Model:</string>
+    <string name="do_you_own_a_car">Do you own a car?</string>
+    <string name="home_address">Home Address:</string>
+    <string name="mobile_no">Mobile No:</string>
+    <string name="no">NO</string>
+    <string name="textview">TextView</string>
+    <string name="yes">YES</string>
+    <string name="color">Color:</string>
+    <string name="vehicle_number">Vehicle Number:</string>
+    <string-array name="capacitynum">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string name="title_activity_choice">Choice</string>
+    <string name="details">DETAILS</string>
+</resources>
