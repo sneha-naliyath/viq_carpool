@@ -25,6 +25,10 @@
         <activity
             android:name=".Choice"
             android:label="@string/title_activity_choice"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Signup"
+            android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

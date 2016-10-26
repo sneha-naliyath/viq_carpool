@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,42 +24,7 @@
         android:layout_height="match_parent">
 
 
-    <TextView
-        android:text="@string/home_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/homeadd"
-        tools:text="Home Address:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/mobfield"
-        android:layout_toStartOf="@+id/editText2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:background="@android:drawable/edit_text"
-        android:editable="false"
-        android:layout_alignBaseline="@+id/homeadd"
-        android:layout_alignBottom="@+id/homeadd"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/mobfield"
-        android:background="@android:drawable/editbox_background_normal"
-        android:phoneNumber="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:maxLines="1" />
-
-    <TextView
+        <TextView
         android:text="@string/mobile_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,13 +36,13 @@
         android:layout_toStartOf="@+id/mobfield"
         android:layout_marginEnd="11dp" />
 
-    <CheckBox
+        <CheckBox
         android:text="@string/yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_alignBaseline="@+id/checkBox2"
-        android:layout_alignBottom="@+id/checkBox2"
+        android:id="@+id/checkBoxyes"
+        android:layout_alignBaseline="@+id/checkBoxno"
+        android:layout_alignBottom="@+id/checkBoxno"
         android:layout_centerHorizontal="true"
         tools:text="YES" />
 
@@ -85,10 +51,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBoxno"
         tools:text="NO"
         android:layout_below="@+id/editText2"
-        android:layout_toEndOf="@+id/checkBox"
+        android:layout_toEndOf="@+id/checkBoxyes"
         android:layout_marginStart="41dp"
         android:checked="false" />
 
@@ -100,7 +66,7 @@
         android:id="@+id/textView6"
         tools:text="Car Model:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_below="@+id/checkBox"
+        android:layout_below="@+id/checkBoxyes"
         android:layout_alignStart="@+id/mobno" />
 
     <EditText
@@ -149,18 +115,6 @@
         android:layout_below="@+id/editText6"
         android:layout_alignStart="@+id/textView4" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:background="@android:drawable/edit_text"
-        android:layout_alignBaseline="@+id/textView7"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView7" />
-
         <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -182,6 +136,17 @@
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbars="vertical" />
 
+        <TextView
+            android:text="@string/do_you_own_a_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            tools:text="Do you own a car?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_alignBaseline="@+id/checkBoxyes"
+            android:layout_alignBottom="@+id/checkBoxyes"
+            android:layout_alignStart="@+id/homeadd" />
+
         <Button
             android:text="SIGN UP"
             android:layout_width="match_parent"
@@ -190,20 +155,57 @@
             android:background="@android:color/holo_green_dark"
             android:textAlignment="center"
             android:onClick="choices"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="18dp"
             android:layout_below="@+id/editText4"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentStart="true" />
+
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/mobfield"
+        android:background="@android:drawable/editbox_background_normal"
+        android:phoneNumber="true"
+            android:maxLines="1"
+            android:layout_marginTop="62dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp" />
 
         <TextView
-            android:text="@string/do_you_own_a_car"
+            android:text="@string/home_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            tools:text="Do you own a car?"
+            android:id="@+id/homeadd"
+            tools:text="Home Address:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:layout_alignBaseline="@+id/checkBox"
-            android:layout_alignBottom="@+id/checkBox"
-            android:layout_alignStart="@+id/homeadd" />
+            android:layout_marginTop="43dp"
+            android:layout_below="@+id/mobfield"
+            android:layout_toStartOf="@+id/mobfield" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:background="@android:drawable/edit_text"
+            android:editable="false"
+            android:layout_alignBaseline="@+id/homeadd"
+            android:layout_alignBottom="@+id/homeadd"
+            android:layout_toEndOf="@+id/textView7" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:background="@android:drawable/edit_text"
+            android:layout_alignBaseline="@+id/textView7"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 </ScrollView>

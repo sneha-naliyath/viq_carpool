@@ -13,19 +13,6 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
     </android.support.design.widget.AppBarLayout>
-
     <include layout="@layout/content_main" />
-
-    <TextView
-        android:text="@string/sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:id="@+id/textView2"
-        tools:text="SIGN UP"
-        android:background="@android:color/holo_green_dark"
-        android:textAlignment="center"
-        android:textColor="?attr/colorBackgroundFloating"
-        android:textSize="36sp"
-        android:textStyle="normal|bold" />
 
 </android.support.design.widget.CoordinatorLayout>
