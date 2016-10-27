@@ -1,5 +1,6 @@
 package com.example.snehanaliyath.carpooling;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,13 @@ public class Choice extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+    }
+
+    public void map(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+
     }
 
 }

@@ -37,7 +37,8 @@
         android:layout_below="@+id/textView"
         android:layout_alignStart="@+id/textView"
         android:layout_marginStart="70dp"
-        android:allowUndo="true" />
+        android:allowUndo="true"
+        android:onClick="map" />
 
     <Button
         android:text="FIND A RIDE"
