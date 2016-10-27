@@ -21,37 +21,7 @@ public class Signup1 extends AppCompatActivity {
         //setSupportActionBar(toolbar);
 
 
-        CheckboxGroup cg = new CheckboxGroup();
-        Checkbox c1 = new Checkbox("A", false, cg);
-        Checkbox c2 = new Checkbox("B", false, cg);
 
-
-
-
-        boolean checked = ((CheckBox) view).isChecked();
-        EditText yzEdit = (EditText) findViewById(R.id.yzEdit);
-
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.yzCheck:
-                if (checked){
-                    yzEdit.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                    yzEdit.setTextIsSelectable(true);
-                    yzEdit.setFocusable(true);
-                    yzEdit.setFocusableInTouchMode(true);
-                    yzEdit.setCursorVisible(true);
-                    yzEdit.setEnabled(true);
-                }
-                else{
-                    yzEdit.setBackgroundColor(Color.parseColor("#CCCCCC"));
-                    yzEdit.setTextIsSelectable(false);
-                    yzEdit.setFocusable(false);
-                    yzEdit.setFocusableInTouchMode(false);
-                    yzEdit.setCursorVisible(false);
-                    yzEdit.setEnabled(false);
-                }
-                break;
-        }
 
 
     }
