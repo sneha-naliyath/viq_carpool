@@ -20,12 +20,13 @@ public class Choice extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
-
     public void map(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, MapsActivity.class);
+           /* EditText editText = (EditText) findViewById(R.id.edi);
+            String message = editText.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE, message);*/
         startActivity(intent);
 
     }
-
 }

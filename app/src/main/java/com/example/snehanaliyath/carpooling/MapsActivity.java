@@ -3,22 +3,30 @@ package com.example.snehanaliyath.carpooling;
 import android.*;
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.identity.intents.Address;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -57,10 +65,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        // LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
-
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+         LatLng infopark = new LatLng(10.0089200, 76.3615900);
+        mMap.addMarker(new MarkerOptions().position(new LatLng(10.0089200, 76.3615900)).title("Infopark"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(infopark));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(infopark, (float) 20));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -74,10 +82,54 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //Location location = locationManager.getLastKnownLocation(provider);
         mMap.setMyLocationEnabled(true);
 
-        //LatLng current = new LatLng(latitude, longitude);
+
 
 
     }
+
+    public void onSearch(View view){
+        EditText location_tf=(EditText)findViewById(R.id.TFaddress);
+        String location=location_tf.getText().toString();
+        List<android.location.Address> addressList=null;
+
+        if(location!=null||!location.equals(""))
+        {
+            Geocoder geocoder=new Geocoder(this);
+            try {
+                addressList=geocoder.getFromLocationName(location,1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            android.location.Address address=addressList.get(0);
+            LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(latLng).title(location));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, (float) 20));
+
+
+
+        }
+    }
+
+    public void onZoom(View view)
+    {
+        if(view.getId()==R.id.Bzoomin)
+        {
+            mMap.animateCamera(CameraUpdateFactory.zoomIn());
+        }
+
+        if(view.getId()==R.id.Bzoomout)
+        {
+            mMap.animateCamera(CameraUpdateFactory.zoomOut());
+        }
+
+    }
+
+
+
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

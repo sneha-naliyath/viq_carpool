@@ -19,11 +19,6 @@ public class Signup1 extends AppCompatActivity {
         setContentView(R.layout.activity_signup1);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
-
-
-
-
-
     }
     public void choices(View view) {
         // Do something in response to button
