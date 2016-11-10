@@ -24,7 +24,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -68,7 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          LatLng infopark = new LatLng(10.0089200, 76.3615900);
         mMap.addMarker(new MarkerOptions().position(new LatLng(10.0089200, 76.3615900)).title("Infopark"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(infopark));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(infopark, (float) 20));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(infopark, (float) 15));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -106,7 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
 
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, (float) 20));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, (float) 15));
 
 
 
