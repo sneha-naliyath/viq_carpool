@@ -23,9 +23,7 @@ public class Choice extends AppCompatActivity {
     public void offer(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, OfferRide.class);
-           /* EditText editText = (EditText) findViewById(R.id.edi);
-            String message = editText.getText().toString();
-            intent.putExtra(EXTRA_MESSAGE, message);*/
+
         startActivity(intent);
 
     }

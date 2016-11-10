@@ -16,6 +16,29 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/source"
+        android:hint="Source"
+        android:background="@android:drawable/edit_text"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        android:id="@+id/imageButton2"
+        android:background="@android:color/background_light"
+        android:layout_alignEnd="@+id/destination"
+        android:layout_alignBottom="@+id/source"
+        android:layout_alignTop="@+id/source"
+        android:layout_alignStart="@+id/imageButton4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/destination"
@@ -24,6 +47,17 @@
         android:layout_alignTop="@+id/imageView4"
         android:layout_alignEnd="@+id/source"
         android:layout_toEndOf="@+id/imageView4" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        android:id="@+id/imageButton4"
+        android:background="@android:color/background_light"
+        android:layout_alignTop="@+id/destination"
+        android:layout_alignEnd="@+id/destination"
+        android:layout_alignBottom="@+id/destination"
+        android:onClick="map" />
 
     <Button
         android:text="OFFER"
@@ -51,7 +85,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/green"
+        app:srcCompat="@drawable/ic_launcher"
         android:id="@+id/imageView2"
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
@@ -69,6 +103,17 @@
         android:layout_below="@+id/textView5"
         android:layout_alignLeft="@+id/textView5" />
 
+    <TextView
+        android:text="Departure Date:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:id="@+id/textView5"
+        android:textSize="18sp"
+        android:layout_marginLeft="19dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageView4" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,94 +122,4 @@
         android:layout_marginBottom="30dp"
         android:layout_above="@+id/textView5"
         android:layout_alignLeft="@+id/imageButton" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/datebox"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView5"
-        android:hint="dd/mm/yyyy"
-        android:background="@android:drawable/edit_text" />
-
-    <TextView
-        android:text="Departure Date:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:id="@+id/textView5"
-        android:textSize="18sp"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/imageView4" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/source"
-        android:hint="Source"
-        android:background="@android:drawable/edit_text"
-        android:layout_marginEnd="26dp"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
-        android:layout_toRightOf="@+id/imageButton" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_mylocation"
-        android:id="@+id/imageButton2"
-        android:background="@android:color/transparent"
-        android:onClick="map"
-        android:layout_alignRight="@+id/source"
-        android:layout_alignBottom="@+id/source"
-        android:layout_alignTop="@+id/source" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_mylocation"
-        android:id="@+id/imageButton4"
-        android:background="@android:color/transparent"
-        android:onClick="map"
-        android:layout_alignTop="@+id/destination"
-        android:layout_alignRight="@+id/destination"
-        android:layout_alignBottom="@+id/destination" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="time"
-        android:ems="10"
-        android:id="@+id/clockbox"
-        android:hint="hh:mm"
-        android:background="@android:drawable/edit_text"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/clock"
-        android:id="@+id/clockbutton"
-        android:background="@android:color/transparent"
-        android:layout_alignTop="@+id/clockbox"
-        android:layout_alignParentRight="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_today"
-        android:id="@+id/datebutton"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true" />
-
 </RelativeLayout>

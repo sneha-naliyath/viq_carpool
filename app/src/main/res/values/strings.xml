@@ -41,5 +41,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_pool_list">PoolList</string>
     <string name="title_activity_offer_ride">OfferRide</string>
-    <string name="title_activity_maps3">Map</string>
+    <string name="title_activity_maps_activitydes">Map</string>
+    <string name="title_activity_maps_route">Map</string>
 </resources>

@@ -8,8 +8,6 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -52,7 +50,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".MapsActivitysrc"
             android:label="@string/title_activity_maps" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -70,6 +68,12 @@
             android:name=".OfferRide"
             android:label="@string/title_activity_offer_ride"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MapsActivitydes"
+            android:label="@string/title_activity_maps_activitydes" />
+        <activity
+            android:name=".MapsActivityRoute"
+            android:label="@string/title_activity_maps_route"></activity>
     </application>
 
 </manifest>

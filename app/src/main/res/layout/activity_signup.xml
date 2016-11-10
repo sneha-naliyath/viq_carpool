@@ -16,18 +16,16 @@
 
     <include layout="@layout/content_signup" />
 
-    <EditText
+    <TextView
+        android:text="@string/sign_up"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:inputType="textPersonName"
-        android:text="SIGN UP"
-        android:ems="10"
-        android:id="@+id/editText9"
-        android:autoText="false"
-        android:textAlignment="center"
-        android:textSize="36sp"
-        android:textStyle="normal|bold"
+        android:layout_height="46dp"
+        android:id="@+id/textView2"
+        tools:text="SIGN UP"
         android:background="@android:color/holo_green_dark"
-        android:textColor="@android:color/white" />
+        android:textAlignment="center"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textSize="36sp"
+        android:textStyle="normal|bold" />
 
 </android.support.design.widget.CoordinatorLayout>
